@@ -29,7 +29,7 @@ class Write {
     .contains('jhonata@ticto.com.br')
 
   }
-  editarNome (){
+  editarCad (){
     cy.get('td.text-truncate')
     .contains('Jhonata Flaubert')
     .siblings()
@@ -45,7 +45,7 @@ class Write {
     cy.contains('Usuário salvo com sucesso.').should('be.visible')
    }
 
-  apagarFor() {
+  apagarCad() {
     cy.get('td.text-truncate')
     .contains('Jhonata Flaubert')
     .siblings()
