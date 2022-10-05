@@ -3,27 +3,26 @@ import whrite from '../support/pages'
 
 describe('Analista QA', () => {
   beforeEach(() => {
-    /// hooks que sao executados antes e depois do teste.
     cy.visit('https://qa-test.ticto.io/')
   })
- it('Quando eu não inserir dados e clicar no botão Cadastrar, então devo verificar as mensagens de campos obrigatorio', () => {
+ it('Validas as mensagens de erro de todos os campos', () => {
     whrite.naoInserirDados()
   });
-  it('Quando eu não inserir email corretamente e clicar no botão Cadastrar, então devo verificar a mensagem no campo de email', () => {
+  it('Validar a mensagem de erro do email', () => {
     whrite.verficaCampoEmail()
   });
    
 
- it('Quando eu inserir os dados corretamente e finalizar o cadastro, então meu cadastro deve aparecer no formulario', () => {
+ it('Validar o cadastro de um novo usuário', () => {
    whrite.inserirDadosSucesso()
  }); 
 
- it('Quando eu inserir os dados corretamente devo editar e verificar a mensagem', () => {
-   whrite.editarNome()
+ it('Validar a ediçãod de um cadastro', () => {
+   whrite.editarCad()
  });
 
-it('Quando eu editar e salvar o formulario então devo apagar meu Registro', () => {
-  whrite.apagarFor()
+it('Validar após editar um cadastro excluir o mesmo', () => {
+  whrite.apagarCad()
 });
 
 });
