@@ -1,0 +1,153 @@
+Casos de teste : Ticto teste analista QA
+
+
+		1- Validar se a página foi carregada
+
+DADO que eu tenha acesso a página da ticto;
+
+QUANDO eu inserir a URL
+E dou enter;
+
+ENTÃO o sistema deve exibir a tela inicial carregada;
+
+
+
+		2.1- Validar a mensagem de erro do campo nome
+
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu inserir um nome invalido
+E inserir um email corretamente
+E inserir um password corretamente
+E clicar em cadastrar;
+
+ENTÃO devo ver uma mensagem de erro abaixo do campo nome;
+
+
+
+		2.2- Validar a mensagem de erro do campo email
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu inserir um email invalido
+E inserir um nome corretamente
+E inserir um password corretamente
+E clicar em cadastrar;
+
+ENTÃO devo ver uma mensagem de erro abaixo do campo email;
+
+
+
+		2.3- Validar a mensagem de erro do campo password
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu inserir um password invalido
+E inserir um nome corretamente
+E inserir um email corretamente
+E clicar em cadastrar;
+
+ENTÃO devo ver uma mensagem de erro abaixo do campo password;
+
+
+
+		2.4 - Visualizar e validar a mensagem de erro com dados de cadastro incorretos
+
+DADO que eu tenha acesso à página de cadastro ticto;
+
+QUANDO eu não inserir os dados de 
+( nome )
+( e-mail )
+( password)
+E clicar em cadastrar;
+
+ENTÃO devo visualizar as mensagens de erro para ambos os campos;
+
+
+
+		3- Validar o cadastro de um novo usuário
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu inserir os dados corretos de
+( nome )
+( e-mail )
+( password)
+E clicar em cadastrar;
+
+ENTÃO o sistema deve cadastrar o novo usuário
+E devo ver uma mensagem
+E o sistema deve limpar todos os campos;
+
+
+
+		3.1- Validar se os dados cadastrados são os mesmo que foi informado
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu rolar a página até o final;
+
+ENTÃO devo ver um cadastro com os mesmos dados informados anteriormente;
+
+
+
+		4- Validar se o sistema permite a edição com dados invalidos de um cadastro
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu rolar a página até o final
+E clicar no botão de ação
+E clicar no submenu Editar
+E editar um cadastro com dados inválidos
+E clicar em salvar;
+
+ENTÃO devo ver uma mensagem de erro;
+
+
+
+		4.1- Validar se o sistema permite a edição de um cadastro
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu rolar a página até o final
+E clicar no botão de ação
+E clicar no submenu Editar
+E editar um cadastro
+E clicar em salvar;
+
+ENTÃO devo ver uma mensagem de confirmação;
+
+
+
+		4.2- Validar se o nome e email foram alterados no grid
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu rolar a página até o final;
+
+ENTÃO devo ver que os dados foram alterados corretamente;
+
+
+
+		5- Validar se o sistema permite excluir um cadastro
+
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu rolar a página até o final
+E clicar no botão de ações
+E clicar no submenu excluir
+E clicar no pop-up na opção excluir
+
+ENTÃO devo ver uma mensagem de confirmação;
+
+
+
+		5.1- Validar se o sistema excluiu o cadastro;
+
+DADO que eu tenha acesso à página da ticto;
+
+QUANDO eu rolar a página até o final;
+
+ENTÃO não devo ver mais o cadastro excluído;
